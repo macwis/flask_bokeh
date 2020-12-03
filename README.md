@@ -59,7 +59,7 @@ upstream myapp {
 }
 ```
 
-4. Alternatively to the above we could run multiple instances with stand-alone servers (as they suggest for the Heroku deployment), but is a very low resource utilization strategy.
+4. Alternatively to the above we could run multiple instances with stand-alone servers (as they suggest for the Heroku deployment), but it is a very low resource utilization strategy.
 
 5. There is special care needed in passing on the sessions and stick sessions for user-instance via nginx proxy.
 
