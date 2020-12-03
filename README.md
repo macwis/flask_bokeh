@@ -63,6 +63,6 @@ upstream myapp {
 
 5. There is special care needed in passing on the sessions and stick sessions for user-instance via nginx proxy.
 
-6. In larger deployments topic 6. would have to be addressed by higher layers of the reverse proxy and they all would have to properly work.
+6. In larger deployments topic 5. would have to be addressed by higher layers of the reverse proxy and they all would have to properly work.
 
 7. For development nginx would have to be built in the Dockerfile together with gunicorn running multiple threads (via e.g. systemd).
