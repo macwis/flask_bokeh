@@ -30,6 +30,15 @@ Basic reading material:
 - https://panel.holoviz.org/user_guide/Server_Deployment.html
   Important quote: "Once you have deployed the app you might find that if your app is visited by more than one user at a time it will become unresponsive. In this case you can use the Heroku CLI to scale your deployment."
 
+# Research goals
+
+Find out if it is possible to create a dockerfile with a built-in nginx reverse proxy configuration which allows to run a container featuring:
+
+- single HTTP(s) Flask server with embedded multiple bokeh/panel widgets
+- Non-blocking sync. SQL calls, which can update results via Websockets
+- Concurrently serve non-blocking multiple users from one container
+- Sticky sessions on user-proxy-server to manage authorization and WS updates
+
 # Observations:
 
 1. The scaling happens on the thread level - where each thread opens up a communication port for a websocket. One thread - one user :(
